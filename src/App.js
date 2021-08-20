@@ -23,7 +23,7 @@ function App() {
   contacts and appointments
   */
     const addContact = (contact) => {
-        const updateContacts = [...contacts, { name: contact.name, phoneNumber: contact.phoneNumber, email: contact.email }];
+        const updateContacts = [...contacts, { name: contact.name, phone: contact.phone, email: contact.email }];
         setContacts(updateContacts);
     };
 
