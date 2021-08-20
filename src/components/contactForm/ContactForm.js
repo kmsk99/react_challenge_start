@@ -6,7 +6,7 @@ export const ContactForm = (props) => {
             <ul>
                 <li>
                     <label htmlFor="name">Name:{props.checkDuplicate(props.name) ? "Name is duplicate" : ""}</label>
-                    <input type="text" id="name" name="user_name" value={props.name} required minlength="1" maxlength="20" size="20" onChange={props.handleNameChange} />
+                    <input type="text" id="name" name="user_name" value={props.name} required maxlength="20" size="20" onChange={props.handleNameChange} />
                 </li>
                 <li>
                     <label htmlFor="phone">Phone:</label>
@@ -14,7 +14,7 @@ export const ContactForm = (props) => {
                 </li>
                 <li>
                     <label htmlFor="email">E-mail:</label>
-                    <input type="email" id="email" name="user_email" value={props.email} required minlength="5" size="20" onChange={props.handleEmailChange} />
+                    <input type="email" id="email" name="user_email" value={props.email} required size="20" onChange={props.handleEmailChange} />
                 </li>
                 <input type="submit" value="Add"></input>
             </ul>

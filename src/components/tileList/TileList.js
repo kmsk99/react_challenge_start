@@ -4,8 +4,8 @@ import { Tile } from "../tile/Tile";
 export const TileList = (props) => {
     return (
         <div>
-            {props.contacts.map((contact) => {
-                return <Tile contact={contact} />;
+            {props.elements.map((element) => {
+                return <Tile element={element} />;
             })}
         </div>
     );

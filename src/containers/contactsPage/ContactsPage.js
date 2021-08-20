@@ -7,7 +7,6 @@ export const ContactsPage = (props) => {
   Define state variables for 
   contact info and duplicate check
   */
-    const contacts = props.contacts;
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
@@ -52,7 +51,7 @@ export const ContactsPage = (props) => {
     useEffect(() => {});
 
     const checkDuplicate = (input) => {
-        const isDuplicate = contacts.some((item) => {
+        const isDuplicate = props.contacts.some((item) => {
             return item.name === input;
         });
         return isDuplicate;
@@ -76,7 +75,7 @@ export const ContactsPage = (props) => {
             <hr />
             <section>
                 <h2>Contacts</h2>
-                <TileList contacts={contacts} />
+                <TileList elements={props.contacts} />
             </section>
         </div>
     );
