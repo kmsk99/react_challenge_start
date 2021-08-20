@@ -10,7 +10,7 @@ function App() {
   contacts and appointments 
   */
 
-    const [contacts, setContacts] = useState([]);
+    const [contacts, setContacts] = useState([{ name: "name", phone: "01044441111", email: "email@naver.com" }]);
     const [appointments, setAppointments] = useState([]);
 
     const ROUTES = {
